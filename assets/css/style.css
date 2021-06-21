@@ -98,7 +98,7 @@ body {
 .btn:focus {
   outline: none;
 }
-
+   
 .btn--big {
   padding-top: 10px;
   border-radius: 50%;
