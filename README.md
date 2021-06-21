@@ -4,7 +4,7 @@
 
 ### What is this website for?
 
-This is a game about maths
+This is a maths game to keep your maths skills in shape
 
 ### What does it do?
 
@@ -56,7 +56,7 @@ In addition, you may also use this section to discuss plans for additional featu
 
 n this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
 
-### Some the tech used includes:
+### Some the tech used includes
 
 - **HTML**, **CSS** and **Javascript**
   - Base languages used to create website
@@ -65,7 +65,7 @@ n this section, you should mention all of the languages, frameworks, libraries, 
 - [Bootstrap](http://getbootstrap.com/)
   - We use **Bootstrap** to give our project a simple, responsive layout
 - [JQuery](https://jquery.com)
-  - Use **JQuery** for boostrap and displaying modal
+  - Use **JQuery** for bootstrap and displaying modal
 - [npm](https://www.npmjs.com/)
   - We use **npm** to install **http-server** in order to view the site
 - [Bower](https://bower.io)
@@ -133,7 +133,7 @@ In addition, if it is not obvious, you should also describe how to run your code
 ### Media
 
 - The photos used in this site were obtained from [Pixabay](https://pixabay.com/)
-- The video used on this site belongs to Nat Geo Wild channel on [youtube](https://www.youtube.com/watch?v=WfrG95GyU9U)
+- The video used on this site belongs to Nat Geo Wild channel on [Youtube](https://www.youtube.com/watch?v=WfrG95GyU9U)
 
 ### Acknowledgements
 
