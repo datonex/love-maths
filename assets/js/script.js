@@ -46,10 +46,12 @@ function checkAnswer() {
 
     if (isCorrect) {
         alert('Hey! You can do Maths! :D');
+        incrementScore();
     } else {
         alert(
             `Doh!...... you answered ${userAnswer}. The correct answer was ${calculatedAnswer[0]}!`
         );
+        incrementWrongAnswer();
     }
 
     runGame(calculatedAnswer[1]);
@@ -72,11 +74,22 @@ function calculateCorrectAnswer() {
     }
 }
 
-// Define function to increase the score when it's correct
-function incrementScore() {}
+/**
+ * Gets the current score fromm the DOM and increments it by 1
+ */
 
-// Define function to increase the score when it's incorrect
-function incrementWrongAnswer() {}
+function incrementScore() {
+    let oldScore = parseInt(document.getElementById('score').innerText);
+    document.getElementById('score').innerText = ++oldScore;
+}
+
+/**
+ * Gets the current tally of incorrect from the DOm and increments by 1
+ */
+function incrementWrongAnswer() {
+    let oldScore = parseInt(document.getElementById('incorrect').innerText);
+    document.getElementById('incorrect').innerText = ++oldScore;
+}
 
 // Define function to show addition, subtraction, multiplication and division questions
 function displayAdditionQuestion(operand1, operand2) {
