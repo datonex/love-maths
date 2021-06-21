@@ -1,19 +1,36 @@
-// define function to run the game
+// Wait for the DOM to finish loading before running the game
+// Get the button elements and add event listener to them
+document.addEventListener('DOMContentLoaded', function () {
+  let buttons = document.getElementsByTagName('button');
+
+  for (let button of buttons) {
+    button.addEventListener('click', function () {
+      if (this.getAttribute('data-type') === 'submit') {
+        alert('You clicked Submit!');
+      } else {
+        let gameType = this.getAttribute('data-type');
+        alert(`You clicked ${gameType}`);
+      }
+    });
+  }
+});
+
+// Define function to run the game
 function runGame() {}
 
-// define function to check the answer
+// Define function to check the answer
 function checkAnswer() {}
 
-// define a function to perform the calculation and return the correct answer
+// Define a function to perform the calculation and return the correct answer
 function calculateCorrectAnswer() {}
 
-// define function to increase the score when it's correct
+// Define function to increase the score when it's correct
 function incrementScore() {}
 
-// define function to increase the score when it's incorrect
+// Define function to increase the score when it's incorrect
 function incrementWrongAnswer() {}
 
-// define function to show addition, subtraction, multiplication and division questions
+// Define function to show addition, subtraction, multiplication and division questions
 function displayAdditionQuestion() {}
 
 function displaySubtractQuestion() {}
