@@ -39,6 +39,8 @@ function runGame(gameType) {
         displayMultiplyQuestion(num1, num2);
     } else if (gameType === 'subtract') {
         displaySubtractQuestion(num1, num2);
+    } else if (gameType === 'division') {
+        displayDivideQuestion(num1, num2);
     } else {
         alert(`Unknown game type: ${gameType}`);
         throw `Unknown game type: ${gameType}. Aborting!`; // stop function from running
@@ -82,6 +84,8 @@ function calculateCorrectAnswer() {
         return [operand1 * operand2, 'multiply'];
     } else if (operator === '-') {
         return [operand1 - operand2, 'subtract'];
+    } else if (operator === '/') {
+        return [operand1 / operand2, 'division'];
     } else {
         alert(`Unimplemented operator ${operator}`);
         throw `Unimplemented operator ${operator}. Aborting!`;
@@ -112,6 +116,11 @@ function displayAdditionQuestion(operand1, operand2) {
     document.getElementById('operator').textContent = '+'; // set operator in html
 }
 
+/**
+ * subtract function will first check if first value is greater than second value.
+ * If it is, the numbers will display, if not, a new number is generated until
+ * condition is true
+ */
 function displaySubtractQuestion(operand1, operand2) {
     document.getElementById('operand1').textContent = operand1 > operand2 ? operand1 : operand2;
     document.getElementById('operand2').textContent = operand1 > operand2 ? operand2 : operand1;
@@ -124,4 +133,8 @@ function displayMultiplyQuestion(operand1, operand2) {
     document.getElementById('operator').textContent = 'x'; // set operator in html
 }
 
-function displayDivideQuestion() {}
+function displayDivideQuestion(operand1, operand2) {
+    document.getElementById('operand1').textContent = operand1 * operand2;
+    document.getElementById('operand2').textContent = operand2;
+    document.getElementById('operator').textContent = '/'; // set operator in html
+}
